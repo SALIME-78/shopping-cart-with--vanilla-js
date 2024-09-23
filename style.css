@@ -1,0 +1,495 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eceaea;
+}
+
+/*************** Start styling header ***************/
+.nav-item .fa-bag-shopping {
+  font-size: 28px;
+  color: #ffffff
+}
+
+.top-navigation {
+  padding-right: 35px;
+  display: flex;
+  justify-content: center;
+}
+
+.top-navigation-content {
+  height: 100%;
+  display: flex;
+  list-style-type: none;
+}
+
+.top-navigation-content li{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.top-navigation-content a {
+  color: rgb(32, 32, 32);
+  text-decoration: none;
+}
+
+.top-navigation-content .fa-user-cog {
+  margin: 0 30px
+}
+
+.top-navigation-content sup span {
+  width: 8px;
+  height: 8px;
+  border: 1px solid;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.top-dropdown-menu-container {
+  position: relative;
+  
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 3.2em;
+  left: -15px;
+  z-index: 9999;
+  background-color: #dfd9d9;
+  box-shadow: 0px 8px 16px 0px rgba(1, 1, 1, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 120px;
+  height: 150px;
+  padding: 10px 0;
+  list-style: none;
+}
+
+@media screen and (max-width: 992px) {
+  .dropdown-content {
+    left: -150px;
+    top: -4em
+  }
+}
+
+/* Style for the dropdown menu links */
+.dropdown-content a {
+  color: #333;
+  padding: 5px 16px;
+  text-decoration: none;
+  white-space: nowrap; 
+  margin-right: 10px;
+  font-size: 13px;
+}
+
+.dropdown-content span {
+  margin-left: 5px
+}
+
+/* Change color of links on hover */
+.dropdown-content a:hover {
+  color: #1f1e1e;
+}
+
+.nav-item .fa-heart span  {
+  font-size: 12px;
+  top: -13px;
+  right: -15px;
+  width: 20px;
+  height: 20px;
+  padding-top: 12%;
+  border-radius: 50%;
+  background-color: red;
+  color: #ffffff;
+  text-align: center;
+}
+
+.nav-item .fa-bag-shopping span  {
+  font-size: 12px;
+  top: -23px;
+  right: -17px;
+  width: 20px;
+  height: 20px;
+  padding-top: 35%;
+  border-radius: 50%;
+  background-color: red;
+  color: #ffffff;
+  text-align: center;
+}
+
+/*************** End styling header **************/
+
+/*************** Index.html styles ***************/
+
+.form-select:focus {
+  border-color: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.form-select:hover {
+  cursor: pointer;
+}
+
+.minmax-price-container {
+  max-width: 400px;
+  margin-top: 30px;
+  display: flex;
+  
+}
+
+.minmax-input-group {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  border: none
+}
+
+.minmax-input-group input {
+  width: 60px;
+  padding-bottom: 1px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.1);
+  background-color: #d8d8d8 !important;
+  text-align: right;
+}
+
+.minmax-input-group input:focus {
+  outline: 2px solid #0dcaf0
+}
+
+.currency {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.minmax-go {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  color:white;
+  background-color: #0dcaf0;
+}
+
+#product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 50px 0;
+  width: 100%;
+}
+
+.items-container {
+  width: 100%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px
+}
+
+.item-container {
+  background-color: #eceaea;
+  width: 13rem;
+  height: 340px;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  box-shadow: 2px 9px 14px rgba(0, 0, 0, 0.2);
+}
+
+.main-item {
+  display: block;
+  margin: 0 auto;
+}
+
+.item-heading {
+  text-transform: capitalize;
+}
+
+.item-description {
+  margin: .5rem 0;
+  font-size: .9rem;
+  font-weight: 200;
+}
+
+.item-price {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.item-price sup {
+  color: green;
+}
+
+.rating {
+  margin: 3px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-cart-btn {
+  border: none;
+  background-color: transparent;
+  margin: 0 auto;
+  width: 100%;
+  border: 1px;
+  font-weight: bold;
+  padding: .5rem 1rem;
+  background-color: #0dcaf0;
+  color: #fff;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  font-weight: 200;
+  position: relative;
+  cursor: pointer;
+  transition: all .3s linear;
+}
+
+.item-cart-btn:hover {
+  color: #fff;
+  background-color: rgb(160, 110, 206);
+}
+
+.product-in-cart {
+  text-align: center;
+  width: 80%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+}
+
+/************** Styling login and signup pages *******************/
+
+.text-black {
+  color: #000;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.auth-form-control {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  background: none;
+}
+
+.auth-form-control:active,
+.auth-form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #000;
+}
+
+.col-form-label {
+  color: #000;
+  font-size: 13px;
+}
+
+.custom-select {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+}
+
+.custom-select:active,
+.custom-select:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #000;
+}
+
+.auth-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 0;
+  font-size: 13px;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  border-radius: 30px !important;
+}
+
+.auth-btn.btn-primary {
+  border-radius: 30px;
+  background: rgb(76, 81, 218);
+  color: #fff;
+
+  box-shadow: 0 15px 30px 0 rgba(77, 128, 228, 0.2);
+}
+
+.auth-btn:hover {
+  color: #fff;
+}
+
+.auth-btn:active,
+.auth-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.contact-wrap {
+  box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
+  background: #f3f3f3;
+}
+
+.contact-wrap .col-form-label {
+  font-size: 14px;
+  color: #b3b3b3;
+  margin: 0 0 10px 0;
+  display: inline-block;
+  padding: 0;
+}
+
+.contact-wrap .form,
+.contact-wrap .contact-info {
+  padding: 40px;
+}
+
+.contact-wrap .contact-info {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-wrap .contact-info ul li {
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-wrap .contact-info ul li .wrap-icon {
+  font-size: 20px;
+  color: #fff;
+  margin-top: 5px;
+}
+
+.contact-wrap .form {
+  background: #fff;
+}
+
+.contact-wrap .form h3 {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.contact-wrap .contact-info {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.contact-wrap .contact-info a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.contact-wrap .contact-info h3 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+label.error {
+  font-size: 12px;
+  color: red;
+}
+
+#message {
+  resize: vertical;
+}
+
+#form-message-warning,
+#form-message-success {
+  display: none;
+}
+
+#form-message-warning {
+  color: #B90B0B;
+}
+
+#form-message-success {
+  color: #55A44E;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.submitting {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  display: none;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000;
+}
+
+/* media queries */
+@media screen and (max-width: 580px) {
+  .contact-wrap {
+      width: 90% !important;
+ 
+  }
+  .form-footer {
+    flex-direction: column;
+  }
+  .form-footer p {
+    margin-bottom: 5px !important;
+  }
+  .my-sm {
+    margin-top: 20px
+  }
+  .search-sort-container {
+    margin: auto;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    width: 88% !important;
+  }
+  .search-sort-container input, .search-sort-container div {
+    width: 90% !important;
+  }
+
+  .item-container {
+    width: 64%;
+    height: 370px
+  }
+}	
+
+@media screen and (min-width: 581px) and (max-width: 850px) {
+  .contact-wrap {
+    width: 70% !important;
+  } 
+  .my-sm {
+    margin-top: 20px
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .contact-wrap {
+    width: 35% !important;
+  } 
+}
