@@ -72,44 +72,41 @@
       </div>
     </nav>
   </header>
-
-  <div class="container">
-    <div class="w-100 mt-5 d-flex flex-column align-items-center">
-      <p id="already-in-cart" class="bg-warning fw-bold w-100 container m-auto d-none mb-3"
-        style="color: white; font-weight: bold; text-align: center; padding: 10px 0; border-radius: 5px;">Already In
-        Cart
-      </p>
-      <p id="success" class="bg-success fw-bold w-100 container m-auto mb-3 d-none"
-        style="color: white; font-weight: bold; text-align: center; padding: 10px 0; border-radius: 5px;">Successfully
-        Added To Cart
-      </p>
-
+  <div class="w-100 mt-5 d-flex flex-column align-items-center">
+    <p id="already-in-cart" class="bg-warning fw-bold w-100 container m-auto d-none mb-3"
+      style="color: white; font-weight: bold; text-align: center; padding: 10px 0; border-radius: 5px">Already In
+      Cart
+    </p>
+    <p id="success" class="bg-success fw-bold w-100 container m-auto mb-3 d-none"
+      style="color: white; font-weight: bold; text-align: center; padding: 10px 0; border-radius: 5px;">Successfully
+      Added To Cart
+    </p>
+  </div>
+  <div class="search-sort-container container d-flex justify-content-center w-100 gap-5">
+    <input class="form-control" id="search-products" placeholder="Search Products" onkeyup="searchProducts(this.value)"
+      style="width: 60%; margin-bottom: 1.2rem;">
+    <div id="select-category" style="width: 20%;">
+      <select class="form-select" id="select-by-category">
+        <option value="All" selected>Categories</option>
+        <option value="E-Books">E-Books</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Laptops">Laptops</option>
+        <option value="Phones">Phones</option>
+      </select>
     </div>
-    <div class="search-sort-container d-flex justify-content-center w-100 gap-5">
-      <input class="form-control" id="search-products" placeholder="Search Products"
-        onkeyup="searchProducts(this.value)" style="width: 60%; margin-bottom: 1.2rem;">
-      <div id="select-category" style="width: 20%;">
-        <select class="form-select" id="select-by-category">
-          <option value="All" selected>Categories</option>
-          <option value="E-Books">E-Books</option>
-          <option value="Fashion">Fashion</option>
-          <option value="Laptops">Laptops</option>
-          <option value="Phones">Phones</option>
-        </select>
-      </div>
-      <div id="select-container" style="width: 20%;">
-        <select class="form-select" id="sort-options">
-          <option value="all" selected>Sort by</option>
-          <option value="alphabetical-a-z">Alphabetical (A-Z)</option>
-          <option value="alphabetical-z-a">Alphabetical (Z-A)</option>
-          <option value="relevance">relevance</option>
-          <option value="low">Price (Low-High)</option>
-          <option value="high">Price (High-Low)</option>
-          <option value="new">Newest</option>
-          <option value="old">Oldest</option>
-        </select>
-      </div>
+    <div id="select-container" style="width: 20%;">
+      <select class="form-select" id="sort-options">
+        <option value="all" selected>Sort by</option>
+        <option value="alphabetical-a-z">Alphabetical (A-Z)</option>
+        <option value="alphabetical-z-a">Alphabetical (Z-A)</option>
+        <option value="relevance">relevance</option>
+        <option value="low">Price (Low-High)</option>
+        <option value="high">Price (High-Low)</option>
+        <option value="new">Newest</option>
+        <option value="old">Oldest</option>
+      </select>
     </div>
+  </div>
   </div>
   </div>
   <div class="container minmax-price-container">
@@ -147,7 +144,7 @@
     dropdownMenu.addEventListener('mouseleave', () => {
       dropdownMenu.classList.add("d-none")
     })
-    
+
     // Go to wishlist
     function goWishList() {
       let users = JSON.parse(localStorage.getItem("users"));
@@ -175,7 +172,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
   <script src="js/products.js"></script>

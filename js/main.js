@@ -193,49 +193,6 @@ selectElement.addEventListener('change', function() {
 
 filterByCategory()
 
-
-
-/* let selectByPrice = document.getElementById('select-by-price')
-
-// sort products by price
-selectByPrice.addEventListener('change', function() {
-
-  let selectedByPrice = Number(selectByPrice.value);
-  console.log(selectByPrice.value)
-
-  let filteredProducts = products.filter((product)=>{
-    return product.price <= selectedByPrice;
-  });
-
-  if(selectByPrice.value == "All"){
-    filteredProducts = products
-  }
-  
-  let searchedByPrice = ""
-
-  if(selectByPrice.value == "low"){
-    let sortedProducts = products.sort((low, high) => low.price - high.price);
-    sortedProducts.forEach((product)=>{
-      searchedByPrice += showDesiredproducts(product)
-    })
-    
-  }
-
-  if(selectByPrice.value == "high"){
-    let sortedProducts = products.sort((low, high) => high.price - low.price);
-    sortedProducts.forEach((product)=>{
-      searchedByPrice += showDesiredproducts(product)
-    })
-  }
-
-  filteredProducts.forEach((product)=>{
-    searchedByPrice += showDesiredproducts(product)
-  })
-
-  document.getElementById("product-list").innerHTML = searchedByPrice;
-  
-}); */
-
 // Sort products
 const sortProducts = () => {
   const sortOptions = document.getElementById('sort-options');
